@@ -35,7 +35,7 @@ Semi-automated Telegram session creation tool built with Gogram.
 # Prepare phones.txt with phone numbers (one per line)
 echo "1234567890" > phones.txt
 
-docker run -it \
+docker run -it --rm\
   -v $(pwd)/phones.txt:/app/phones.txt \
   -v $(pwd)/sessions:/app/sessions \
   ghcr.io/hnnsly/tg-sgen -app-id YOUR_APP_ID -app-hash "YOUR_APP_HASH"
